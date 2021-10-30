@@ -1,0 +1,19 @@
+.tlo{
+    background-image: url("background_photo.jpg");
+}
+.marginesy{
+    margin-left:20px ;
+    margin-right:20px ;
+}
+.background_ksiazki{
+    background-image: url("ksiazki.jpg");
+}
+.background_klienci{
+    background-image: url("klienci.jpg");
+}
+.background_autorzy{
+    background-image: url("autorzy.jpg");
+}
+.background_wypozyczenia{
+    background-image: url("wypozyczenia.jpg");
+}
