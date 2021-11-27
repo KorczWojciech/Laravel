@@ -71,12 +71,6 @@ Route::get('/dashboard',[Controller::class,'NotDashboard'])->name('NotDashboard'
 
 
 
-
-
-//Route::get('/delete/{item_number}', [OrderController::class, 'delete_item'])->where('item_number', '[0-9]+')->middleware('auth')
-
-
-
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
@@ -86,6 +80,6 @@ Route::get('/', function () {
     ]);
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->name('dashboard');
+//Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+//    return Inertia::render('Dashboard');
+//})->name('dashboard');
