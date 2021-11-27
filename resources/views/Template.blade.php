@@ -39,17 +39,21 @@
                         <a class="nav-link" href="{{asset('/rents')}}">Wypożyczenia</a>
                     </li>
                 </ul>
+                @if(Auth::check())
                     <div class="navbar-nav my-2 my-lg-0">
                         <a class="nav-link" href="{{asset('/logout')}}">Wyloguj</a>
                     </div>
-
+                @else
+                    <div class="navbar-nav my-2 my-lg-0">
+                        <a class="nav-link" href="{{asset('/login')}}">Zaloguj</a>
+                    </div>
+                    @endif
             </div>
         </div>
     </nav>
     <div class="marginesy">
     @yield('content')
     </div>
-</div>
 
 <!-- Optional JavaScript; choose one of the two! -->
 

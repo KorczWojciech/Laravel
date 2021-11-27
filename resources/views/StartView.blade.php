@@ -1,6 +1,16 @@
 @extends ('Template')
 
 @section('content')
+    <?php
+    use Illuminate\Support\Facades\Auth;
+    ?>
+    @if(Auth::check()==true)
+    <div class="zalogowany">
+        <p>
+            Jesteś zalogowany jako {{Auth::user()->name}}!
+        </p>
+    </div>
+    @endif
 <div class="row mt-3">
   <div class="col-sm-6 ">
     <div class="card">
@@ -23,6 +33,8 @@
     </div>
   </div>
 </div>
+    @if(Auth::check()==true)
+        @if(Auth::user()->type=='admin')
 <div class="row mt-3">
     <div class="col-sm-6">
         <div class="card">
@@ -45,4 +57,6 @@
         </div>
     </div>
 </div>
+    @endif
+    @endif
 @endsection('content')
